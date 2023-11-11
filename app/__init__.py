@@ -11,4 +11,5 @@ app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql+pymysql://root:adminadmin@localho
 db = SQLAlchemy(model_class=declarative_base())
 db.init_app(app)
 
+
 from app import routes
