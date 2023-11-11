@@ -1,0 +1,13 @@
+.msg {
+  border-radius: 10px;
+}
+
+.msg.right {
+  background-color: antiquewhite;
+  float: right;
+}
+
+.msg.left {
+  background-color: greenyellow;
+  color: white;
+}
