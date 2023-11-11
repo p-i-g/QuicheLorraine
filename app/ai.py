@@ -6,7 +6,7 @@ def get_openai_response(prompt):
     # Set your OpenAI API key
     client = OpenAI(
         # defaults to os.environ.get("OPENAI_API_KEY")
-        api_key="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",
+        api_key="sk-irt",
     )
 
     chat_completion = client.chat.completions.create(
@@ -22,17 +22,17 @@ def get_openai_response(prompt):
     return chat_completion.choices[0].message.content
 
 
-def get_output(s):
+def get_output(s, topic):
     classifier = pipeline("zero-shot-classification", model="facebook/bart-large-mnli")
     candidate_labels = ['electrodynamics', 'News', 'Emails', 'Legal', 'Medical', 'Fiction', 'Business',
-                        'Advertisements', 'Government', 'Others']
+                        'Advertisements', 'Government', 'Others', topic]
     classifier1 = pipeline("sentiment-analysis", model="michellejieli/inappropriate_text_classifier")
 
     print(classifier1(s)[0]['label'])
     if classifier1(s)[0]['label'] == "NSFW":
         return "Please do not send inappropriate messages"
-    if classifier(s, candidate_labels)['labels'][0] != "electrodynamics":
-        return "Please only send questions related to electrodynamics"
+    if classifier(s, candidate_labels)['labels'][0] != topic:
+        return f"Please only send questions related to {topic}."
     return get_openai_response(s)
 
 

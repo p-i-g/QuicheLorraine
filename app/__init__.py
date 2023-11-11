@@ -5,7 +5,7 @@ from sqlalchemy.orm import declarative_base
 
 app = Flask(__name__)
 app.secret_key = os.urandom(24)
-app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql+pymysql://root:adminadmin@localhost/nushhack'
+app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql+pymysql://root:admin@localhost/nushhack'
 
 
 db = SQLAlchemy(model_class=declarative_base())
