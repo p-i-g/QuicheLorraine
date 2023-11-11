@@ -1,15 +1,12 @@
-import openai
-from langchain.chains import RetrievalQA
-from langchain.llms.ollama import Ollama
-from langchain.prompts import PromptTemplate
 from openai import OpenAI
 from transformers import pipeline
+
 
 def get_openai_response(prompt):
     # Set your OpenAI API key
     client = OpenAI(
         # defaults to os.environ.get("OPENAI_API_KEY")
-        api_key="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",
+        api_key="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",
     )
 
     chat_completion = client.chat.completions.create(
@@ -39,7 +36,5 @@ def get_output(s):
     return get_openai_response(s)
 
 
-
-
 if __name__ == '__main__':
-    print(get_output("What is bremsstrahlung?"))
+    print(get_output("Why do electrons have a curved path when there is a B field?"))

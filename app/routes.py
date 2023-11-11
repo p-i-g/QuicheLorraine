@@ -1,6 +1,7 @@
 from flask import render_template, redirect, url_for, request
 
 from app import app
+from app.ai import get_output
 
 
 @app.route('/')
@@ -12,7 +13,7 @@ def home():
 def chat():
     print("test", request.method)
     if request.method == 'POST':
-        print(request.form)
+        print(get_output(request.form["question"]))
     return render_template('base.html', tab='chat')
 
 
