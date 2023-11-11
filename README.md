@@ -1,10 +1,10 @@
 # QuicheLorraine 🚀
 
 ## Overview
-QuicheLorraine 🌈 harnesses the power of a fine-tuned LLaMA model to revolutionize learning for students with autism and ADHD. This repository is the cornerstone of an educational platform that personalizes learning experiences, ensuring they are engaging, effective, and tailored to the unique learning styles of these students.
+QuicheLorraine 🌈 harnesses the power of a large language model to revolutionize learning for students with autism and ADHD. This repository is the cornerstone of an educational platform that personalizes learning experiences, ensuring they are engaging, effective, and tailored to the unique learning styles of these students.
 
 ## Features
-- **Tailored Educational Content:** Leverages the advanced AI of LLaMA to offer customized learning experiences. 📚
+- **Tailored Educational Content:** Leverages the advanced AI of large language models to offer customized learning experiences. 📚
 - **Engaging Interactive Modules:** Designed to be captivating and responsive to keep students focused and interested. 💡
 - **Secure Learning Environment:** A safe and moderated space conducive to learning for all students. 🛡️
 - **Progress Tracking:** Easy-to-understand metrics and progress tracking for educators and caregivers. 📈
